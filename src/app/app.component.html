@@ -1,0 +1,17 @@
+<input type="text" placeholder="MovieName" #name>
+
+<input type="submit" id="search" value="Search" (click)="gData(name.value)" class="btn">
+
+<div>
+    <div *ngIf="searchHistory&&searchHistory.length>0">SEARCH HISTORY</div>
+    <ul>
+        <li *ngFor="let search of searchHistory,index">{{index}} {{search}}</li>
+    </ul>
+</div>
+
+<ul *ngIf="data">
+    <li *ngFor="let movie of data">
+        MovieName :  {{ movie.Title }}    
+        Year      :  {{ movie.Year }}
+    </li>
+</ul>
