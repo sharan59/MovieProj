@@ -39,15 +39,3 @@ th, td {
 }
 
 tr:nth-child(even) {background-color: #f2f2f2;}
-.paging{
-    display:flex;
-    flex-direction: row
-}
-
-.pgno{
-border:2px solid black
-}
-.active{
-    background-color: blue;
-    color:white;
-}
