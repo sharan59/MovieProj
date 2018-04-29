@@ -8,10 +8,15 @@
         <li *ngFor="let search of searchHistory,index">{{index}} {{search}}</li>
     </ul>
 </div>
-
-<ul *ngIf="data">
-    <li *ngFor="let movie of data">
-        MovieName :  {{ movie.Title }}    
-        Year      :  {{ movie.Year }}
-    </li>
-</ul>
+<div *ngIf="searchClicked">
+<table>
+    <tr>
+      <th>MovieName </th>
+      <th>Year </th>  
+    </tr>
+    <tr *ngFor="let movie of data">  
+      <td>{{movie.Title}}</td>
+    <td>{{movie.Year}}</td>
+    </tr> 
+    </table>
+    </div>

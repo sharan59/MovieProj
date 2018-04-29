@@ -27,8 +27,6 @@ this.s = a;
 //this.y = b;
 if (this.s) {
   this.searchClicked = true;
- // this.fetchMovies();
- 
   this.searchHistory.unshift(this.s);
   this.searchHistory.splice(5);
 }
